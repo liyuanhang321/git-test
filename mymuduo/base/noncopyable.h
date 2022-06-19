@@ -3,22 +3,20 @@
 #include <vector>
 using namespace std;
 
-std::vector<int> a;
-namespace muduo {
+namespace mymuduo {
 
 class noncopyable {
  public:
-  noncopyable(const noncopyable&) = delete;
+  noncopyable(const noncopyable&) = delete;  //防止隐式转换
   void operator=(const noncopyable&) = delete;
 
  protected:
   /* data */
-  noncopyable(/* args */) = default;
+  noncopyable(/* args */) = default; //生成默认构造函数
   ~noncopyable() = default;
-  int a = 1;
-  int b = 1;
+
 };
 
-}  // namespace muduo
+}  // namespace mymuduo
 
 #endif  // MUDUO_BASE_NONCOPYABLE_H
