@@ -22,15 +22,10 @@ string s;
 #include<unordered_map>
 unordered_map<char,int> map;
 // __DATE__ 当前日期，一个以 “MMM DD YYYY” 格式表示的字符串常量。
-
 // __TIME__ 当前时间，一个以 “HH:MM:SS” 格式表示的字符串常量。
-
 // __FILE__ 这会包含当前文件名，一个字符串常量。
-
 // __LINE__ 这会包含当前行号，一个十进制常量。
-
 // __STDC__ 当编译器以 ANSI 标准编译时，则定义为 1；判断该文件是不是标准 C 程序。
-
 // __FUNCTION__ 程序预编译时预编译器将用所在的函数名，返回值是字符串;
 
 
@@ -48,3 +43,13 @@ std::vector<int>a;
 #include<assert.h>
 //assert(int expression) //为假时报警
 
+#include <queue>
+//优先队列
+priority_queue<int, vector<int>,less<int>>q_big_heap; //小顶堆
+priority_queue<int,vector<int>,greater<int>>q_small_heap; //大顶堆
+priority_queue<int> heap; //默认大顶堆
+
+
+#include<numeric>
+std::vector<int>a(10,5);
+// accumulate(a.begin(),a.end(),0);
